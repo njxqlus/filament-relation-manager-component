@@ -1,67 +1,68 @@
-# :package_description
+# Use Filament Relation Manager Everywhere!
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/njxqlus/filament-relation-manager-component.svg?style=flat-square)](https://packagist.org/packages/njxqlus/filament-relation-manager-component)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/njxqlus/filament-relation-manager-component/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/njxqlus/filament-relation-manager-component/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/njxqlus/filament-relation-manager-component/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/njxqlus/filament-relation-manager-component/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/njxqlus/filament-relation-manager-component.svg?style=flat-square)](https://packagist.org/packages/njxqlus/filament-relation-manager-component)
 
-<!--delete-->
----
-This repo can be used to scaffold a Filament plugin. Follow these steps to get started:
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Make something great!
----
-<!--/delete-->
+<img alt="banner" class="filament-hidden" src="https://github.com/njxqlus/filament-relation-manager-component/blob/main/.github/banner.png?raw=true">
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Use Filament Relation Manager Everywhere!
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-config"
+composer require njxqlus/filament-relation-manager-component
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
+php artisan vendor:publish --tag="filament-relation-manager-component-views"
 ```
 
 ## Usage
 
+Example below shows how to use different relation managers in tabs without lazy load.
+
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
-```
-
-## Testing
-
-```bash
-composer test
+public static function form(Form $form): Form
+{
+    return $form
+        ->schema([           
+            Forms\Components\Tabs::make()->tabs([
+                Forms\Components\Tabs\Tab::make('Versions')->schema([
+                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazy(false)
+                ]),
+                Forms\Components\Tabs\Tab::make('Stands')->schema([
+                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazy(false)
+                ]),
+                Forms\Components\Tabs\Tab::make('Contexts')->schema([
+                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazy(false)
+                ]),
+            ])
+        ]);
+}
+    
+public static function infolist(Infolist $infolist): Infolist
+{
+    return $infolist->schema([       
+        Infolists\Components\Tabs::make()->tabs([
+            Infolists\Components\Tabs\Tab::make('Versions')->schema([
+                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazy(false)
+            ]),
+            Infolists\Components\Tabs\Tab::make('Stands')->schema([
+                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazy(false)
+            ]),
+            Infolists\Components\Tabs\Tab::make('Contexts')->schema([
+                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazy(false)
+            ]),
+        ])
+    ]);
+}
 ```
 
 ## Changelog
@@ -78,7 +79,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Mikael Ahabalyants](https://github.com/njxqlus)
 - [All Contributors](../../contributors)
 
 ## License

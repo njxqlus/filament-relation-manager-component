@@ -1,29 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "njxqlus/filament-relation-manager-component",
+    "description": "Use Filament Relation Manager Everywhere!",
     "keywords": [
-        ":vendor_name",
+        "njxqlus",
         "laravel",
-        ":package_slug"
+        "filament",
+        "filament-relation-manager-component"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/njxqlus/filament-relation-manager-component",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/njxqlus/filament-relation-manager-component/issues",
+        "source": "https://github.com/njxqlus/filament-relation-manager-component"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Mikael Ahabalyants",
+            "email": "njxqlus@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
         "filament/filament": "^3.0",
-        "filament/forms": "^3.0",
-        "filament/tables": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0",
         "illuminate/contracts": "^10.0"
     },
@@ -37,18 +36,16 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Njxqlus\\Filament\\Components\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Njxqlus\\Filament\\Components\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -68,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Njxqlus\\Filament\\Components\\FilamentRelationManagerComponentServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentRelationManagerComponent": "Njxqlus\\Filament\\Components\\Facades\\FilamentRelationManagerComponent"
             }
         }
     },
