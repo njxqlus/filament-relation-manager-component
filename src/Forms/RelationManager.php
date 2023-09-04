@@ -9,15 +9,16 @@ class RelationManager extends Component
 {
     protected string $view = 'filament-relation-manager-component::forms.relation-manager';
 
-    protected string|Closure $relationManager;
-    protected bool|Closure $isLazy = false;
+    protected string | Closure $relationManager;
+
+    protected bool | Closure $isLazy = false;
 
     public static function make(): static
     {
         return app(static::class);
     }
 
-    public function manager(string|Closure $relationManager): static
+    public function manager(string | Closure $relationManager): static
     {
         $this->relationManager = $relationManager;
 
@@ -29,7 +30,7 @@ class RelationManager extends Component
         return $this->evaluate($this->relationManager);
     }
 
-    public function lazy(bool|Closure $condition = true): static
+    public function lazy(bool | Closure $condition = true): static
     {
         $this->isLazy = $condition;
 
@@ -38,6 +39,6 @@ class RelationManager extends Component
 
     public function isLazy(): bool
     {
-        return (bool)$this->evaluate($this->isLazy);
+        return (bool) $this->evaluate($this->isLazy);
     }
 }
