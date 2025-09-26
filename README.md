@@ -29,35 +29,35 @@ php artisan vendor:publish --tag="filament-relation-manager-component-views"
 Example below shows how to use different relation managers in tabs without lazy load.
 
 ```php
-public static function form(Form $form): Form
+public static function form(Schema $schema): Schema
 {
-    return $form
-        ->schema([           
-            Forms\Components\Tabs::make()->tabs([
-                Forms\Components\Tabs\Tab::make('Versions')->schema([
+    return $schema
+        ->schema([
+            Schemas\Components\Tabs::make()->tabs([
+                Schemas\Components\Tabs\Tab::make('Versions')->schema([
                     \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazy(false)
                 ]),
-                Forms\Components\Tabs\Tab::make('Stands')->schema([
+                Schemas\Components\Tabs\Tab::make('Stands')->schema([
                     \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazy(false)
                 ]),
-                Forms\Components\Tabs\Tab::make('Contexts')->schema([
+                Schemas\Components\Tabs\Tab::make('Contexts')->schema([
                     \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazy(false)
                 ]),
             ])
         ]);
 }
-    
-public static function infolist(Infolist $infolist): Infolist
+
+public static function infolist(Schema $schema): Schema
 {
-    return $infolist->schema([       
-        Infolists\Components\Tabs::make()->tabs([
-            Infolists\Components\Tabs\Tab::make('Versions')->schema([
+    return $schema->schema([
+        Schemas\Components\Tabs::make()->tabs([
+            Schemas\Components\Tabs\Tab::make('Versions')->schema([
                 \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazy(false)
             ]),
-            Infolists\Components\Tabs\Tab::make('Stands')->schema([
+            Schemas\Components\Tabs\Tab::make('Stands')->schema([
                 \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazy(false)
             ]),
-            Infolists\Components\Tabs\Tab::make('Contexts')->schema([
+            Schemas\Infolists\Components\Tabs\Tab::make('Contexts')->schema([
                 \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazy(false)
             ]),
         ])
