@@ -3,7 +3,7 @@
 namespace Njxqlus\Filament\Components\Infolists;
 
 use Closure;
-use Filament\Infolists\Components\Component;
+use Filament\Schemas\Components\Component;
 
 class RelationManager extends Component
 {
