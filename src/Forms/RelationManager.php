@@ -3,7 +3,7 @@
 namespace Njxqlus\Filament\Components\Forms;
 
 use Closure;
-use Filament\Forms\Components\Component;
+use Filament\Schemas\Components\Component;
 
 class RelationManager extends Component
 {
