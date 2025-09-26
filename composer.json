@@ -11,7 +11,7 @@
     "support": {
         "issues": "https://github.com/njxqlus/filament-relation-manager-component/issues",
         "source": "https://github.com/njxqlus/filament-relation-manager-component"
-    ],
+    },
     "license": "MIT",
     "authors": [
         {
