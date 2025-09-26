@@ -30,7 +30,7 @@
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^8.0 || ^9.0",
         "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.0 || ^10.0",
+        "orchestra/testbench": "^9.0 || ^10.0",
         "pestphp/pest": "^3.0 || ^4.0",
         "pestphp/pest-plugin-arch": "^2.0",
         "pestphp/pest-plugin-laravel": "^3.0 || ^4.0",
@@ -42,12 +42,12 @@
         "psr-4": {
             "Njxqlus\\Filament\\Components\\": "src/"
         }
-    },
+    ],
     "autoload-dev": {
         "psr-4": {
             "Njxqlus\\Filament\\Components\\Tests\\": "tests/"
         }
-    },
+    ],
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",
@@ -61,7 +61,7 @@
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
         }
-    },
+    ],
     "extra": {
         "laravel": {
             "providers": [
@@ -71,7 +71,7 @@
                 "FilamentRelationManagerComponent": "Njxqlus\\Filament\\Components\\Facades\\FilamentRelationManagerComponent"
             }
         }
-    },
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
