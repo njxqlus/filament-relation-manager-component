@@ -42,12 +42,12 @@
         "psr-4": {
             "Njxqlus\\Filament\\Components\\": "src/"
         }
-    ],
+    },
     "autoload-dev": {
         "psr-4": {
             "Njxqlus\\Filament\\Components\\Tests\\": "tests/"
         }
-    ],
+    },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",
@@ -61,7 +61,7 @@
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
         }
-    ],
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -71,7 +71,7 @@
                 "FilamentRelationManagerComponent": "Njxqlus\\Filament\\Components\\Facades\\FilamentRelationManagerComponent"
             }
         }
-    ],
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
