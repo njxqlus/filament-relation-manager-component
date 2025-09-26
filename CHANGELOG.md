@@ -2,6 +2,18 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 2.0.1 - 2025-09-26
+
+### What's Changed
+
+* Filament v4 fixes by @zvizvi in https://github.com/njxqlus/filament-relation-manager-component/pull/32
+
+### New Contributors
+
+* @zvizvi made their first contribution in https://github.com/njxqlus/filament-relation-manager-component/pull/32
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/2.0.0...2.0.1
+
 ## 2.0.0 - 2025-09-26
 
 ### What's Changed
