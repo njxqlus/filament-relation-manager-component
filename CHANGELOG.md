@@ -2,6 +2,19 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 2.1.0 - 2025-11-17
+
+### What's Changed
+
+* build(deps): bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/njxqlus/filament-relation-manager-component/pull/33
+* Fix ownerRecord assignment to work with modal/slideover by @webard in https://github.com/njxqlus/filament-relation-manager-component/pull/34
+
+### New Contributors
+
+* @webard made their first contribution in https://github.com/njxqlus/filament-relation-manager-component/pull/34
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/2.0.1...2.1.0
+
 ## 2.0.1 - 2025-09-26
 
 ### What's Changed
