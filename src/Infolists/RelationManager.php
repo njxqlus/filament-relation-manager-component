@@ -41,4 +41,9 @@ class RelationManager extends Component
     {
         return (bool) $this->evaluate($this->isLazy);
     }
+
+    public function record(): ?Model
+    {
+        return $this->getRecord();
+    }
 }
