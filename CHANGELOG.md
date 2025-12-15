@@ -2,6 +2,14 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 1.1.2 - 2025-12-15
+
+### What's Changed
+
+* Fix: Model import in Filament v3 version by @webard in https://github.com/njxqlus/filament-relation-manager-component/pull/37
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/1.1.1...1.1.2
+
 ## 1.1.1 - 2025-12-15
 
 ### What's Changed
