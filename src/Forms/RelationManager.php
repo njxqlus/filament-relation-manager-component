@@ -3,6 +3,7 @@
 namespace Njxqlus\Filament\Components\Forms;
 
 use Closure;
+use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\Component;
 
 class RelationManager extends Component
