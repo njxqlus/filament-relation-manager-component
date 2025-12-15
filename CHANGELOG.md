@@ -2,6 +2,14 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 1.1.1 - 2025-12-15
+
+### What's Changed
+
+* Fix: displaying relation manager in infolist by @webard in https://github.com/njxqlus/filament-relation-manager-component/pull/36
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/1.1.0...1.1.1
+
 ## 2.1.0 - 2025-11-17
 
 ### What's Changed
