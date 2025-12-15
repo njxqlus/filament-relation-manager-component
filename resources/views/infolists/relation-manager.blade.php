@@ -12,7 +12,7 @@
 
     $normalizedManagerClass = $normalizeRelationManagerClass($manager);
 
-    $managerLivewireProperties = ['lazy' => $isLazy, 'ownerRecord' => $this->getRecord(), 'pageClass' => $this::class];
+    $managerLivewireProperties = ['lazy' => $isLazy, 'ownerRecord' => $record(), 'pageClass' => $this::class];
 @endphp
 
 
