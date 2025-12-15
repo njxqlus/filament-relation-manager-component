@@ -3,6 +3,7 @@
 namespace Njxqlus\Filament\Components\Infolists;
 
 use Closure;
+use Illuminate\Database\Eloquent\Model;
 use Filament\Infolists\Components\Component;
 
 class RelationManager extends Component
