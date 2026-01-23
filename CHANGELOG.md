@@ -2,6 +2,16 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 2.2.0 - 2026-01-23
+
+### What's Changed
+
+* build(deps): bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/njxqlus/filament-relation-manager-component/pull/35
+* build(deps): bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/njxqlus/filament-relation-manager-component/pull/39
+* Allow Filament v5 by @webard in https://github.com/njxqlus/filament-relation-manager-component/pull/40
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/2.1.0...2.2.0
+
 ## 1.1.2 - 2025-12-15
 
 ### What's Changed
