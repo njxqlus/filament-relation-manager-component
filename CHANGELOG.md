@@ -2,6 +2,15 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 2.2.1 - 2026-03-31
+
+### What's Changed
+
+* build(deps): bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/njxqlus/filament-relation-manager-component/pull/42
+* Chore: remove laravel/contracts from composer.json by @webard in https://github.com/njxqlus/filament-relation-manager-component/pull/44
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/2.2.0...2.2.1
+
 ## 2.2.0 - 2026-01-23
 
 ### What's Changed
