@@ -2,6 +2,18 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 2.2.2 - 2026-03-31
+
+### What's Changed
+
+* Laravel 13.x Compatibility by @laravel-shift in https://github.com/njxqlus/filament-relation-manager-component/pull/41
+
+### New Contributors
+
+* @laravel-shift made their first contribution in https://github.com/njxqlus/filament-relation-manager-component/pull/41
+
+**Full Changelog**: https://github.com/njxqlus/filament-relation-manager-component/compare/2.2.1...2.2.2
+
 ## 2.2.1 - 2026-03-31
 
 ### What's Changed
