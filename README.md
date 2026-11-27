@@ -26,7 +26,11 @@ php artisan vendor:publish --tag="filament-relation-manager-component-views"
 
 ## Usage
 
-Example below shows how to use different relation managers in tabs without lazy load.
+Use `->lazyLoaded()` to defer mounting the relation manager. Pass `false` to mount it immediately (the default), or a closure to decide at runtime. This API works with Filament 4 and 5.
+
+Replace `->lazy($condition)` with `->lazyLoaded($condition)` and `->isLazy()` with `->isLazyLoaded()`. The old methods still work for backward compatibility.
+
+The examples below mount the relation managers immediately.
 
 ```php
 public static function form(Schema $schema): Schema
@@ -35,13 +39,13 @@ public static function form(Schema $schema): Schema
         ->schema([
             Schemas\Components\Tabs::make()->tabs([
                 Schemas\Components\Tabs\Tab::make('Versions')->schema([
-                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazy(false)
+                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazyLoaded(false)
                 ]),
                 Schemas\Components\Tabs\Tab::make('Stands')->schema([
-                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazy(false)
+                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazyLoaded(false)
                 ]),
                 Schemas\Components\Tabs\Tab::make('Contexts')->schema([
-                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazy(false)
+                    \Njxqlus\Filament\Components\Forms\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazyLoaded(false)
                 ]),
             ])
         ]);
@@ -52,13 +56,13 @@ public static function infolist(Schema $schema): Schema
     return $schema->schema([
         Schemas\Components\Tabs::make()->tabs([
             Schemas\Components\Tabs\Tab::make('Versions')->schema([
-                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazy(false)
+                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\VersionsRelationManager::class)->lazyLoaded(false)
             ]),
             Schemas\Components\Tabs\Tab::make('Stands')->schema([
-                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazy(false)
+                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\StandsRelationManager::class)->lazyLoaded(false)
             ]),
             Schemas\Infolists\Components\Tabs\Tab::make('Contexts')->schema([
-                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazy(false)
+                \Njxqlus\Filament\Components\Infolists\RelationManager::make()->manager(RelationManagers\ContextsRelationManager::class)->lazyLoaded(false)
             ]),
         ])
     ]);
