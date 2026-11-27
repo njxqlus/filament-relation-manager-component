@@ -2,6 +2,15 @@
 
 All notable changes to `filament-relation-manager-component` will be documented in this file.
 
+## 2.3.0 - 2026-11-27
+
+### What's Changed
+
+- Added `lazyLoaded()` and `isLazyLoaded()` to the form and infolist relation manager components for Filament 4 and 5. Existing calls to `lazy()` and `isLazy()` still work. PHPStan now points users to the package's new methods. [#51](https://github.com/njxqlus/filament-relation-manager-component/pull/51)
+- Removed the package's development PHPStan setup. [#49](https://github.com/njxqlus/filament-relation-manager-component/pull/49)
+
+[Full changelog](https://github.com/njxqlus/filament-relation-manager-component/compare/2.2.2...2.3.0)
+
 ## 1.1.3 - 2026-06-24
 
 ### What's Changed
